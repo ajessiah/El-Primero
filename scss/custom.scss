@@ -58,8 +58,8 @@ body::before {
 
 .flex-img {
     height: 100%;
-    width: 100%;
-    object-fit: cover;
+    width: auto;
+    object-fit: contain;
 }
 
 .cart-icon {
