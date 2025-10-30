@@ -12076,6 +12076,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  outline: 1px solid red;
 }
 
 .newsletter input, .newsletter button {
@@ -12105,6 +12106,7 @@ footer {
   padding: 30px 20px 0 0;
   align-items: flex-end;
   height: 100%;
+  outline: 1px solid red;
 }
 
 .footer-links button {
@@ -12149,6 +12151,20 @@ footer {
 
 .blockquote-footer {
   text-align: right !important;
+}
+
+@media (max-width: 650px) {
+  .footer-nav {
+    flex-direction: column;
+  }
+  .footer-links {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
