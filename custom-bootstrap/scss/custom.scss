@@ -1,0 +1,298 @@
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+:root {
+    --seablue: #90c1d1;
+    --wetwood: #50402c;
+    --dockbrown: #5e503e;
+    --lightdock: #7f715e;
+    --brassgold: #9a8845;
+    --cloudyskies: #b4b4b420;
+    --primary-font: 'Rye', display;
+    --secondary-font: 'Averia Libre', display;
+}
+
+body {
+    position: relative;
+    background-color: var(--seablue);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: var(--secondary-font);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../Media/oceanunedited.png")
+                no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.constrain {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+  box-sizing: border-box; 
+}
+
+.constrain video { 
+    display: block; 
+    width: 100%; 
+    height: auto; 
+}
+
+.navbar-brand {
+    color: $light;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    height: 62px;
+
+}
+
+.flex-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cart-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: 0;
+}
+
+.hero {
+    margin: 0 auto;
+}
+
+#trailer {
+  width: 100%;
+  height: auto;
+  object-fit: cover;         
+  z-index: 0;
+}
+
+.lead {
+    font-family: var(--primary-font);
+    color: var(--dockbrown);
+    font-size: 38px;
+}
+
+.constrain {
+    box-shadow: 0px 0px 15px 1px #00000041;
+}
+
+.line {
+    height: 2.5px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #7f715ecb;
+    border-radius: 100px;
+}
+
+.constrain p {
+    text-align: justify;
+}
+
+.carousel-item {
+  aspect-ratio: 2 / 1; 
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     
+  transform: translate(-50%, -50%); 
+}
+
+.top-connect, .bottom-connect {
+    height: 2.5px;
+    background-color: var(--brassgold);
+    width: 25px;
+    margin-left: -10px;
+    border-radius: 100px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid var(--brassgold);
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.tl-event {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.tl-event:has(.collapse.show) {
+  padding-bottom: 0;
+}
+
+
+.even {
+    background-color: var(--cloudyskies);
+}
+
+.init-connect {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.event-date {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.tl-connect {
+    height: 2.5px;
+    width: 12px;
+    background-color: var(--brassgold);
+    position: absolute;
+    top: 50%;
+    left: -22px;
+}
+
+.event-head {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.tl-event:hover {
+    color: var(--brassgold);
+    cursor: pointer;
+}
+
+.tl-event:hover .event-details {
+    color: $dark;
+}
+
+.event-details {
+    padding: 10px 0 0 0;
+    grid-column: 1 / span 2;
+    text-align: justify;
+}
+
+footer {
+  background-color: white; 
+  color: #000;
+  padding: 0;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    gap: 25px;
+    margin: 0;
+}
+
+.newsletter {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter input, .newsletter button {
+    display: block;
+    margin: 0 auto 10px auto;
+    padding: 8px;
+    width: 75%;
+}
+
+.newsletter button {
+    background-color: transparent;
+    border: 2px solid var(--wetwood) !important; 
+    transition: all 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: var(--lightdock);
+    border: 2px solid var(--lightdock) !important;
+    color: $light;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 30px 20px 0 0;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.footer-links button {
+    background-color: transparent;
+    border: 2px solid var(--wetwood) !important;
+    margin-bottom: 10px;
+    width: 75%;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.footer-links button:hover {
+    background-color: var(--lightdock);
+    border: 2px solid var(--lightdock) !important;
+    color: $light;
+}
+
+.footer-socials {
+    width: 75%;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-size: 24px;
+    padding: 10px 10px 0 10px;
+    vertical-align: middle;
+}
+
+.wave {
+    margin-bottom: -1px;
+}
+
+.booking {
+    padding: 0;
+    overflow: hidden;
+    height: 900px;
+}
+
+.calendar {
+    margin-top: -85px;
+}
+
+
+.blockquote-footer {
+    text-align: right !important;
+}
+
