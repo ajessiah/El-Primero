@@ -11878,6 +11878,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   font-family: var(--secondary-font);
+  z-index: 0;
 }
 
 body::before {
