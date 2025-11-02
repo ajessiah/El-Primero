@@ -11870,12 +11870,23 @@ textarea.form-control-lg {
   --secondary-font: "Averia Libre", display;
 }
 
+input,
+textarea,
+select {
+  -webkit-appearance: none; /* remove default OS style */
+  border: 2px solid #ccc; /* base border */
+}
+
+html {
+  overflow-x: hidden;
+}
+
 body {
-  position: relative;
-  background-color: var(--seablue);
+  background-color: white;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  position: relative;
   overflow-x: hidden;
   font-family: var(--secondary-font);
   z-index: 0;
@@ -11883,14 +11894,18 @@ body {
 
 body::before {
   content: "";
-  position: absolute;
+  position: absolute; /* fixed ensures it covers viewport on scroll */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../Media/oceanunedited.png") no-repeat center center/cover;
+  background-color: var(--seablue);
+  background-image: url("../Media/oceanunedited.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.8; /* adjust transparency */
   z-index: -1;
-  opacity: 0.8;
 }
 
 .constrain {
@@ -11942,7 +11957,6 @@ body::before {
 .lead {
   font-family: var(--primary-font);
   color: var(--dockbrown);
-  font-size: 38px;
 }
 
 .constrain {
@@ -11992,6 +12006,7 @@ body::before {
   border-left: 3px solid var(--brassgold);
   padding-top: 20px;
   padding-bottom: 30px;
+  transition: all 0.3s ease-in-out;
 }
 
 .tl-event {
@@ -12000,7 +12015,11 @@ body::before {
   padding: 10px;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.75s ease;
+}
+
+.full-spec-date {
+  transition: opacity 0.3s ease-in-out;
 }
 
 .tl-event:has(.collapse.show) {
@@ -12058,7 +12077,7 @@ body::before {
 footer {
   background-color: white;
   color: #000;
-  padding: 0;
+  padding: 20px 0 0 0;
 }
 
 .footer-nav {
@@ -12087,11 +12106,20 @@ footer {
   width: 75%;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--brassgold);
+  box-shadow: none;
+}
+
 .newsletter button {
   width: 75%;
   background-color: transparent;
   border: 2px solid var(--wetwood) !important;
   transition: all 0.3s ease;
+  color: var(--wetwood);
 }
 
 .newsletter button:hover {
@@ -12117,6 +12145,7 @@ footer {
   width: 75%;
   padding: 8px;
   transition: all 0.3s ease;
+  color: var(--wetwood);
 }
 
 .footer-links button:hover {
@@ -12150,8 +12179,28 @@ footer {
   margin-top: -85px;
 }
 
+.blockquote {
+  color: #767373;
+  font-size: 0.9rem;
+  padding: 0 10px;
+  font-style: italic;
+}
+
 .blockquote-footer {
+  padding-top: 8px;
   text-align: right !important;
+  font-style: normal;
+}
+
+.timeline-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.top-connect-container, .bottom-connect-container {
+  width: 100%;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 650px) {
@@ -12165,6 +12214,18 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 0;
+  }
+  .even {
+    background-color: transparent;
+  }
+  .timeline,
+  .top-connect-container,
+  .bottom-connect-container {
+    transform: translate(35%, 0%);
+    transition: transform 0.7s ease-in-out;
+  }
+  .timeline-left {
+    transform: translate(0%, 0%);
   }
 }
 

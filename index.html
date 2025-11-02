@@ -16,12 +16,6 @@
             <a class="navbar-brand" href="index.html">
                 <img src="Media\EP LOGO - just words dark grey.png" class="flex-img" alt="El Primero Logo">
             </a>
-            <!--
-            <div class="container cart-icon d-none">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-total">$0.00</span>
-            </div>
-            -->
             <button class="navbar-toggler" type="button" title="navigation menu" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,14 +31,14 @@
     </nav>
     <section class="text-center my-3 my-md-5 hero">
         <div class="constrain">
-            <video autoplay loop muted controls id="trailer">
-                <source src="Media\EPTrailer.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline webkit-playsinline controls id="trailer" poster="Media/TrailerPoster.png">
+                <source src="Media/EPTrailer.mp4" type="video/mp4">
             </video>
         </div>
     </section>
     <section class="text-center">
         <div class="constrain bg-light text-dark py-4 px-5">
-            <h3 class="lead mb-2">Welcome to <br class="d-md-none">El Primero</h3>
+            <h3 class="lead fs-1 mb-2">Welcome to <br class="d-md-none">El Primero</h3>
             <div class="line mb-3"></div>
             <p>
                 While today’s newest yachts certainly deserve acclaim for their technical achievements, some of the most impressive works of craftsmanship, that remain highly regarded by generations of boating-lovers to this day, date back to more than a century ago.
@@ -98,5 +92,6 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
