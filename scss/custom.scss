@@ -103,6 +103,10 @@ body::before {
     height: auto; 
 }
 
+.text-link {
+    color: var(--brassgold);
+}
+
 .navbar-brand {
     color: $light;
     transition: color 0.3s ease;
@@ -427,14 +431,18 @@ select:focus {
     margin-top: -85px;
 }
 
+.blockquotes {
+    background-color: var(--cloudyskies);
+    width: 100%;
+    padding: 20px;
+}
+
 .blockquote {
     color: #767373;
     font-size: 0.9rem;
-    padding: 0 10px;
     font-style: italic;
+    margin: 0;
 }
-
-
 
 .blockquote-footer {
     padding-top: 8px;
