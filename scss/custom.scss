@@ -141,6 +141,10 @@ body::before {
     background: var(--sunburn);
 }
 
+.navbar-collapse {
+    padding: 0 15px;
+}
+
 .navbar-nav {
     text-align: right;
 }
