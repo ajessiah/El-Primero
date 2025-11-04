@@ -57,7 +57,7 @@ body::before {
     justify-content: space-between;
     width: 100%;
     padding: 0;
-    gap: 15px;
+    gap: 10px;
     box-shadow: none !important;
 }
 
@@ -69,7 +69,7 @@ body::before {
 
 .hero-btns button {
     width: 100%;
-    height: 50px;
+    height: 40px;
     font-size: 1.1rem;
     background: linear-gradient(360deg, var(--sunburn) 0%, var(--brassgold) 30%, var(--sunshine) 100%);
     color: $light;
@@ -84,6 +84,10 @@ body::before {
 
 .hero-btns button:active {
     background: var(--sunburn);
+}
+
+.fa-phone {
+    margin-right: 5px;
 }
 
 .constrain {
