@@ -11861,10 +11861,13 @@ textarea.form-control-lg {
 }
 :root {
   --seablue: #90c1d1;
+  --deepblue: #2d5c94;
   --wetwood: #50402c;
   --dockbrown: #5e503e;
   --lightdock: #7f715e;
+  --sunshine: #fff7b8;
   --brassgold: #9a8845;
+  --sunburn: #3b3011;
   --cloudyskies: #b4b4b420;
   --primary-font: "Rye", display;
   --secondary-font: "Averia Libre", display;
@@ -11894,7 +11897,7 @@ body {
 
 body::before {
   content: "";
-  position: absolute; /* fixed ensures it covers viewport on scroll */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -11904,8 +11907,42 @@ body::before {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  opacity: 0.8; /* adjust transparency */
+  opacity: 0.8;
   z-index: -1;
+}
+
+.hero-btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  gap: 15px;
+  box-shadow: none !important;
+}
+
+.hero-btns a {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.hero-btns button {
+  width: 100%;
+  height: 50px;
+  font-size: 1.1rem;
+  background: linear-gradient(360deg, var(--sunburn) 0%, var(--brassgold) 30%, var(--sunshine) 100%);
+  color: #f8f9fa;
+  border: 2px solid var(--seablue);
+  margin: 0;
+  border-radius: 25px;
+}
+
+.hero-btns button:hover {
+  background: var(--lightdock);
+}
+
+.hero-btns button:active {
+  background: var(--sunburn);
 }
 
 .constrain {
@@ -11927,6 +11964,67 @@ body::before {
   display: flex;
   align-items: center;
   height: 62px;
+}
+
+.nav-flex {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+  margin: 0;
+}
+
+.nav-right .nav-link button {
+  width: 150px;
+  height: 40px;
+  font-size: 1rem;
+  background: linear-gradient(360deg, var(--sunburn) 0%, var(--brassgold) 30%, var(--sunshine) 100%);
+  color: #f8f9fa;
+  border: var(--brassgold);
+  margin: 0;
+  border-radius: 25px;
+}
+
+.nav-right .nav-link button:hover {
+  background: var(--lightdock);
+}
+
+.nav-right .nav-link button:active {
+  background: var(--sunburn);
+}
+
+.navbar-nav {
+  text-align: right;
+}
+
+.wide-nav {
+  align-items: center;
+}
+
+.wide-nav .nav-link button {
+  width: 135px;
+  height: 30px;
+  font-size: 1rem;
+  background: linear-gradient(360deg, var(--sunburn) 0%, var(--brassgold) 30%, var(--sunshine) 100%);
+  color: #f8f9fa;
+  border: var(--brassgold);
+  margin: 0;
+  border-radius: 25px;
+}
+
+.wide-nav .nav-link button:hover {
+  background: var(--lightdock);
+}
+
+.wide-nav .nav-link button:active {
+  background: var(--sunburn);
 }
 
 .flex-img {

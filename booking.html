@@ -12,25 +12,28 @@
 </head>
 <body>
     <nav id="navbar" class="navbar navbar-expand-lg bg-white">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
+        <div class="container nav-flex">
+            <a class="navbar-brand nav-left" href="index.html">
                 <img src="Media\EP LOGO - just words dark grey.png" class="flex-img" alt="El Primero Logo">
             </a>
-            <!--
-            <div class="container cart-icon d-none">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="cart-total">$0.00</span>
+            <div class="container nav-right">
+                <a class="nav-link d-none d-md-block d-lg-none" href="booking.html"><button class="button" type="button" title="Book a Tour">Book a Tour</button></a>
+                <button class="navbar-toggler" type="button" title="navigation menu" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            -->
-            <button class="navbar-toggler" type="button" title="navigation menu" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto d-inline d-lg-none">
                     <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="history.html">History</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="booking.html">Book a Trip</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="booking.html">Book a Tour</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="support.html">Support the Mission</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto d-none d-lg-flex wide-nav">
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="support.html">Support the Mission</a></li>
+                    <li><a class="nav-link" href="booking.html"><button class="button" type="button" title="Book a Tour">Book a Tour</button></a></li>
                 </ul>
             </div>
         </div>

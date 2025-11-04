@@ -12,24 +12,37 @@
 </head>
 <body>
     <nav id="navbar" class="navbar navbar-expand-lg bg-white">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
+        <div class="container nav-flex">
+            <a class="navbar-brand nav-left" href="index.html">
                 <img src="Media\EP LOGO - just words dark grey.png" class="flex-img" alt="El Primero Logo">
             </a>
-            <button class="navbar-toggler" type="button" title="navigation menu" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="container nav-right">
+                <a class="nav-link d-none d-md-block d-lg-none" href="booking.html"><button class="button" type="button" title="Book a Tour">Book a Tour</button></a>
+                <button class="navbar-toggler" type="button" title="navigation menu" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto d-inline d-lg-none">
                     <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="history.html">History</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark" href="booking.html">Book a Trip</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="booking.html">Book a Tour</a></li>
                     <li class="nav-item"><a class="nav-link text-dark" href="support.html">Support the Mission</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto d-none d-lg-flex wide-nav">
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="support.html">Support the Mission</a></li>
+                    <li><a class="nav-link" href="booking.html"><button class="button" type="button" title="Book a Tour">Book a Tour</button></a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <section class="text-center my-3 my-md-5 hero">
+        <div class="container constrain hero-btns mb-3 d-md-none">
+            <a class="nav-link" href="booking.html"><button class="button" type="button" title="Book a Tour">Book a Tour</button></a>
+            <a class="nav-link" href="tel:+15033349994"><button class="button" type="button" title="Call Us">Call Us</button></a>
+        </div>
         <div class="constrain">
             <video autoplay loop muted playsinline webkit-playsinline controls id="trailer" poster="Media/TrailerPoster.png">
                 <source src="Media/EPTrailer.mp4" type="video/mp4">
@@ -38,7 +51,7 @@
     </section>
     <section class="text-center">
         <div class="constrain bg-light text-dark py-4 px-5">
-            <h3 class="lead fs-1 mb-2">Welcome to <br class="d-md-none">El Primero</h3>
+            <h3 class="lead fs-1 mb-2">Welcome to <br class="d-sm-none">El Primero</h3>
             <div class="line mb-3"></div>
             <p>
                 While today’s newest yachts certainly deserve acclaim for their technical achievements, some of the most impressive works of craftsmanship, that remain highly regarded by generations of boating-lovers to this day, date back to more than a century ago.
